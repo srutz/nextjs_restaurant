@@ -1,16 +1,24 @@
-
+"use client"
 import { PageContainer } from "@/components/PageContainer";
 import Image from "next/image"
 import Link from "next/link"
+import { useEffect } from "react"
 
 export default function Home() {
+    console.log("RE-RENDER")
+    /* verwendung als "onMounted"-Callback */
+    useEffect(() => {
+        console.log("EFFECT")
+        const elem = document.querySelector(".c1") as HTMLElement
+        elem.style.color = "RED"
+        return () => {
+        }
+    })
+
     return (
         <PageContainer>
             <div className="column-container">
-                <h1>Willkommen im Restaurant Nice-Place</h1>
-                <Link href="/menu">
-                    <Image src="/restaurant.jpg" priority alt="Our restaurant" width={720} height={480}></Image>
-                </Link>
+                <h1 className="c1">Willkommen im Restaurant</h1>
             </div>
         </PageContainer>
     )
