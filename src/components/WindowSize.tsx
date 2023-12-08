@@ -12,7 +12,7 @@ export function useWindowSize() {
         const s = window.innerHeight
         if (s < 300) {
             setSize("small")
-        } else if (s < 600) {
+        } else if (s < 500) {
             setSize("medium")
         } else {
             setSize("large")
@@ -24,7 +24,7 @@ export function useWindowSize() {
         return () => {
           window.removeEventListener('resize', handleResize);
         };
-      }, []);
+      }, [ size ]);
 
     return size
 }

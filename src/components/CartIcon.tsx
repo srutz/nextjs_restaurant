@@ -3,8 +3,7 @@
 
 import { FaCartArrowDown } from "react-icons/fa"
 import classes from "./CartIcon.module.css"
-import { CartContext, useCart } from "./CartProvider"
-import { useContext, useEffect } from "react"
+import { useCart } from "./CartProvider"
 import { useRouter } from "next/navigation"
 import { useWindowSize } from "./WindowSize"
 
@@ -17,6 +16,8 @@ export default function CartIcon() {
     const onClick = () => {
         router.push("/cart")
     }
+
+    console.log("windowsize=" + size)
 
     return (
         <div className={classes.carticon} onClick={onClick}>
