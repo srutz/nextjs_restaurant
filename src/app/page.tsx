@@ -12,7 +12,6 @@ export default function Home() {
         <PageContainer>
             <div className="column-container">
                 <h1 ref={myref}>Willkommen im Restaurant</h1>
-                <button onClick={() => { setData(data + 1)}}>Increase</button>
             </div>
         </PageContainer>
     )
