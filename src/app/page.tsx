@@ -1,8 +1,6 @@
 "use client"
 import { PageContainer } from "@/components/PageContainer";
-import Image from "next/image"
-import Link from "next/link"
-import {useEffect, useRef, useState} from "react"
+import {useRef, } from "react"
 
 
 export default function Home() {
@@ -12,7 +10,6 @@ export default function Home() {
         <PageContainer>
             <div className="column-container">
                 <h1 ref={myref}>Willkommen im Restaurant</h1>
-                <button onClick={() => { setData(data + 1)}}>Increase</button>
             </div>
         </PageContainer>
     )
